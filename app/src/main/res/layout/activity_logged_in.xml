@@ -4,29 +4,61 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#111632"
     tools:context=".LoggedInActivity">
 
     <TextView
         android:id="@+id/tv_welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="154dp"
-        android:text="Welcome"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="111dp"
+        android:layout_marginBottom="36dp"
+        android:text="WELCOME"
+        android:textColor="#9E8846"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_name"
+        app:layout_constraintEnd_toEndOf="@+id/tv_name"
+        app:layout_constraintStart_toStartOf="@+id/tv_name"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginBottom="70dp"
         android:text="Name"
+        android:textColor="#9E8846"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView_House"
+        app:layout_constraintEnd_toEndOf="@+id/textView_House"
+        app:layout_constraintStart_toStartOf="@+id/textView_House"
+        app:layout_constraintTop_toBottomOf="@+id/tv_welcome" />
+
+    <TextView
+        android:id="@+id/textView_Attributes"
+        android:layout_width="259dp"
+        android:layout_height="174dp"
+        android:layout_marginBottom="131dp"
+        android:background="#9E8846"
+        android:text="Attributes"
+        android:textColor="#ffff"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/tv_welcome"
-        app:layout_constraintTop_toBottomOf="@+id/tv_welcome"
-        app:layout_constraintVertical_bias="0.051" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_House" />
+
+    <TextView
+        android:id="@+id/textView_House"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="72dp"
+        android:text="HouseName"
+        android:textColor="#9D8847"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView_Attributes"
+        app:layout_constraintEnd_toEndOf="@+id/textView_Attributes"
+        app:layout_constraintStart_toStartOf="@+id/textView_Attributes"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,37 +4,81 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#111632"
     tools:context=".SignInActivity">
-
-    <EditText
-        android:id="@+id/editText_userName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="246dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn_SignIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="148dp"
-        android:layout_marginTop="164dp"
+        android:layout_marginBottom="78dp"
+        android:backgroundTint="#9E8846"
         android:text="Sign in"
+        app:layout_constraintBottom_toTopOf="@+id/tv_WrongUsernamePassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Password" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="294dp"
+        android:layout_height="97dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="74dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="56dp"
+        android:gravity="center"
+        android:text="Sign in to your account"
+        android:textColor="#9E8846"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText_userName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_userName"
+        android:layout_width="224dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="54dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:maxHeight="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/editText_Password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/editText_Password"
+        android:layout_width="224dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="72dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:maxHeight="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_SignIn"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText_userName" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tv_WrongUsernamePassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="120dp"
-        android:text="TextView"
+        android:layout_marginBottom="76dp"
+        android:text="Wrong Username or Password"
+        android:textColor="#9E8846"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_SignIn" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
